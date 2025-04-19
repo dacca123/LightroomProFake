@@ -1,0 +1,11 @@
+#!url=https://raw.githubusercontent.com/yourusername/LightroomProFake/main/lightroom.module
+#!name=FakeLightroomPro
+#!desc=Fake Lightroom Pro for personal use
+
+#!homepage=https://github.com/yourusername/LightroomProFake
+
+[MITM]
+hostname = %APPEND% photos.adobe.io
+
+[Script]
+LightroomProFake=type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/dacca123/LightroomProFake/main/LightroomProFake.js
